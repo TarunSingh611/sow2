@@ -7,6 +7,7 @@ import { useTranslation } from '../hooks/useTranslation.js';
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+    const [activeTab, setActiveTab] = useState('businessDetails');
     const { language, flag, changeLanguage } = useLanguage();
     const { t } = useTranslation();
 
@@ -25,22 +26,22 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <div className="nav-tabs">
-                <button className="nav-tab active">
+                <button className={`nav-tab ${activeTab === 'businessDetails' ? 'active' : ''}`} onClick={() => {setActiveTab('businessDetails')}}>
                     <span className="nav-tab-text">{t('businessDetails')}</span>
                     <BusinessDetailsIcon />
                 </button>
                 
-                <button className="nav-tab">
+                <button className={`nav-tab ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => {setActiveTab('settings')}}>
                     <span className="nav-tab-text">{t('settings')}</span>
                     <SettingsIcon />
                 </button>
                 
-                <button className="nav-tab">
+                <button className={`nav-tab ${activeTab === 'standardTexts' ? 'active' : ''}`} onClick={() => {setActiveTab('standardTexts')}}>
                     <span className="nav-tab-text">{t('standardTexts')}</span>
                     <StandardTextsIcon />
                 </button>
                 
-                <button className="nav-tab">
+                    <button className={`nav-tab ${activeTab === 'goToInvoices' ? 'active' : ''}`} onClick={() => {setActiveTab('goToInvoices')}}>
                     <span className="nav-tab-text">{t('goToInvoices')}</span>
                     <GoToInvoicesIcon />
                 </button>
@@ -51,19 +52,19 @@ const Navbar = () => {
             </div>
 
             <div className={`ham-menu ${isMenuOpen ? 'show' : ''}`}>
-                <div className="ham-menu-tab active">
+                <div className={`ham-menu-tab ${activeTab === 'businessDetails' ? 'active' : ''}`} onClick={() => {setIsMenuOpen(false); setActiveTab('businessDetails')}}>
                     <BusinessDetailsIcon />
                     <span className="ham-menu-tab-text">{t('businessDetails')}</span>
                 </div>
-                <div className="ham-menu-tab">
+                <div className={`ham-menu-tab ${activeTab === 'settings' ? 'active' : ''}`} onClick={() => {setIsMenuOpen(false); setActiveTab('settings')}}>
                     <SettingsIcon />
                     <span className="ham-menu-tab-text">{t('settings')}</span>
                 </div>
-                <div className="ham-menu-tab">
+                <div className={`ham-menu-tab ${activeTab === 'standardTexts' ? 'active' : ''}`} onClick={() => {setIsMenuOpen(false); setActiveTab('standardTexts')}}>
                     <StandardTextsIcon />
                     <span className="ham-menu-tab-text">{t('standardTexts')}</span>
                 </div>
-                <div className="ham-menu-tab">
+                <div className={`ham-menu-tab ${activeTab === 'goToInvoices' ? 'active' : ''}`} onClick={() => {setIsMenuOpen(false); setActiveTab('goToInvoices')}}>
                     <GoToInvoicesIcon />
                     <span className="ham-menu-tab-text">{t('goToInvoices')}</span>
                 </div>

@@ -5,21 +5,40 @@ export const en = {
     standardTexts: "Standard texts",
     goToInvoices: "Go to invoices",
     
-    // Common
+
     english: "English",
     swedish: "Svenska",
 
     languageEnglish: "English",
     languageSwedish: "Svenska",
     
-    // Form Section (example)
-    companyName: "Company Name",
-    email: "Email",
-    phone: "Phone",
+
+    formTitle: "Your business details. To update them - just change them.",
+    name: "Name",
     address: "Address",
-    submit: "Submit",
+    address2: "Address 2",
+    postcode: "Postcode",
+    city: "City",
+    ourReference: "Our reference",
+    phone: "Phone",
+    email: "Email",
+    accountNo: "Account no.",
+    orgNumber: "Org. Number",
+    homepage: "Homepage",
+    settingsInstruction: "To change settings - click Settings at the top.",
     
-    // Image Section (example)
+    enterName: "Enter name",
+    enterAddress: "Enter address",
+    enterAddress2: "Enter address 2",
+    enterPostcode: "Enter postcode",
+    enterCity: "Enter city",
+    enterPhone: "Enter phone",
+    enterEmail: "Enter email",
+    enterReference: "Enter",
+    enterAccountNumber: "Enter account number",
+    enterOrgNumber: "Enter org number",
+    homepagePlaceholder: "Will not show on invoices if left empty",
+    
     logo: "Logo",
     profile: "Profile"
 };
