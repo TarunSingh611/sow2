@@ -1,10 +1,17 @@
 import React from 'react';
+import Navbar from './components/Navbar.jsx';
+import DetailsPage from './pages/DetailsPage.jsx';
+import { LanguageProvider } from './contexts/LanguageContext.jsx';
+import './styles/global.css';
 
 const App = () => {
     return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
+        <LanguageProvider>
+            <main>
+                <Navbar/>
+                <DetailsPage/>
+            </main>
+        </LanguageProvider>
     )
 }
 
