@@ -40,5 +40,15 @@ export const en = {
     homepagePlaceholder: "Will not show on invoices if left empty",
     
     logo: "Logo",
-    profile: "Profile"
+    profile: "Profile",
+    
+    // Logo Section
+    ourLogo: "Our Logo",
+    useLogo: "Use logo",
+    chooseLogo: "Choose Logo",
+    previewLogo: "Preview logo",
+    yes: "Yes",
+    no: "No",
+    uploadNew: "Upload new",
+    preview: "Preview"
 };

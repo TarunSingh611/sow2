@@ -43,5 +43,15 @@ export const sv = {
     
     // Image Section (example)
     logo: "Logotyp",
-    profile: "Profil"
+    profile: "Profil",
+    
+    // Logo Section
+    ourLogo: "Vår logotyp",
+    useLogo: "Använd logotyp",
+    chooseLogo: "Välj logotyp",
+    previewLogo: "Förhandsvisa logotyp",
+    yes: "Ja",
+    no: "Nej",
+    uploadNew: "Ladda upp ny",
+    preview: "Förhandsvisa"
 };
