@@ -50,5 +50,9 @@ export const en = {
     yes: "Yes",
     no: "No",
     uploadNew: "Upload new",
-    preview: "Preview"
+    preview: "Preview",
+    
+    // Profile Section
+    profilePicture: "Profile picture",
+    editOriginal: "Edit Original"
 };

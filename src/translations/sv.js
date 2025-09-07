@@ -53,5 +53,9 @@ export const sv = {
     yes: "Ja",
     no: "Nej",
     uploadNew: "Ladda upp ny",
-    preview: "Förhandsvisa"
+    preview: "Förhandsvisa",
+    
+    // Profile Section
+    profilePicture: "Profilbild",
+    editOriginal: "Redigera original"
 };
