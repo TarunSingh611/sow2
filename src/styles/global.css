@@ -4,7 +4,11 @@
     align-items: center;
     padding: 0.3rem 2rem;
     box-shadow: 0 0 50px 0px #cbe6ff;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
 }
 
 .nav-icon {
@@ -187,17 +191,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 2.8rem);
+    min-height: calc(100vh - 2.8rem);
+    height: auto;
     overflow-y: auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    webkit-overflow-scrolling: touch;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    &::-webkit-scrollbar {
-        display: none;
-    }
+}
+
+.details-page-container::-webkit-scrollbar {
+    display: none;
 }
 
 
@@ -205,7 +210,8 @@
     display: flex;
     justify-content: center;
     min-height: 400px;
-    height: 60vh;
+    height: auto;
+    max-height: 80vh;
     gap: 3rem;
 }
 
@@ -356,6 +362,8 @@
     background: white;
     display: flex;
     flex-direction: column;
+    padding: 0.6rem;
+    justify-content: space-between;
 }
 
 .logo-title{
@@ -571,10 +579,95 @@
     
 }
 
+@media screen and (max-height: 1200px) {
+    .logo-controls {
+       gap: 0.9rem;
+    }
+}
+
+
+@media screen and (max-height: 1000px) {
+    .logo-controls {
+       gap: 0.7rem;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .logo-controls {
+       gap: 0.4rem;
+    }
+    .logo-preview-image{
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+@media screen and (max-height: 800px) {
+    .details-page-container {
+        justify-content: center;
+        padding: 0.5rem 0;
+    }
+
+    .details-page {
+        gap: 1.5rem;
+        padding: 0.5rem;
+        max-height: none;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
+
+    .image-section {
+        gap: 0.5rem;
+    }
+
+
+    .logo-controls {
+        gap: 0.5rem;
+    }
+
+    .logo-image-section {
+        height: auto;
+        min-height: 200px;
+    }
+
+    .profile-image-section {
+        height: auto;
+        min-height: 150px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    .details-page-container {
+        padding: 0.25rem 0;
+    }
+
+    .details-page {
+        gap: 1rem;
+        padding: 0.25rem;
+    }
+
+    .form-section {
+        padding: 0.75rem;
+    }
+
+    .logo-image-section {
+        min-height: 150px;
+    }
+
+    .profile-image-section {
+        min-height: 120px;
+    }
+}
+
 @media screen and (max-width: 1100px) {
     .details-page-container {
         justify-content: flex-start;
         padding: 1rem 0;
+        min-height: calc(100vh - 2.6rem);
+        padding-top: 1rem;
     }
 
     .details-page {
@@ -584,6 +677,7 @@
         min-height: auto;
         height: auto;
         padding: 1rem;
+        max-height: none;
     }
 
     .nav-tab {
@@ -627,6 +721,7 @@
 @media screen and (max-width: 600px) {
     .details-page-container {
         padding: 0.5rem 0;
+        padding-top: 0.5rem;
     }
 
     .details-page {

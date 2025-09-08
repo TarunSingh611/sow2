@@ -17,6 +17,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  margin-top: 2.6rem;
+  min-height: calc(100vh - 2.6rem);
+  height: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 #app {
   min-height: 100vh;
   min-width: 100vw;
